@@ -1,39 +1,11 @@
-<!DOCTYPE html>
+=<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Write Wise - Technologies</title>
+    <title>Archaeological ML Project - Technologies</title>
     <link rel="stylesheet" href="styles/style.css">
     <style>
-        .header-container {
-            background-color: #003366;
-            width: 100%;
-            padding: 40px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .header-container h1 {
-            font-size: 2.5em;
-            color: #FFD700;
-            text-shadow: 2px 2px #000000;
-        }
-        .content {
-            max-width: 800px;
-            margin: 40px auto;
-            text-align: left;
-            background: rgba(0, 0, 50, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 86, 255, 0.7);
-        }
-        h2 {
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 5px;
-        }
     </style>
 </head>
 <body>
@@ -44,40 +16,68 @@
     </div>
     
     <div class="content">
-        <table border="1" style="width:100%; text-align:left; border-collapse: collapse; background: rgba(0, 0, 50, 0.7); color: white;">
+        <table border="1" style="width:100%; text-align:left; border-collapse: collapse; background: rgb(255, 81, 0); color: white;">
+            <!-- Programming Language -->
             <tr>
                 <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/python.svg" alt="Python" width="50"></td>
                 <td style="padding: 10px; border: 1px solid #FFD700;">Python</td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">Python is primarily used to run and manage the modified Pluspy interpreter, which processes the TLA+ specifications. It coordinates the generation of random seeds and test steps, handles interactions with the nvme-cli for sending and receiving NVMe commands, and logs the test sequences and results. Python also manages retries of the test sequences to ensure reproducibility and tracks the results for debugging and bug filing purposes.</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/tlalogo.avif" alt="TLA+" width="50"></td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">TLA+</td>
-                <td style="padding: 10px; border: 1px solid #FFD700;"> TLA+ is used to define and formalize the behavior of the system under test, allowing for the generation of test sequences. These sequences are then executed by the modified Pluspy interpreter, which interacts with the NVMe SSD device, ensuring that the test scenarios are consistent and reproducible for failure detection and debugging.</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/PlusPy.png" alt="React.js" width="50"></td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">PlusPy</td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">Pluspy is the Python interpreter for TLA+, executing the TLA+ specifications and generating test sequences based on a random seed and number of steps. It interfaces with the NVMe SSD device through blocking callbacks to nvme-cli, sending commands and receiving results. Pluspy ensures that the same test sequence can be reproduced in case of failures by sampling the same path with the same inputs, which is essential for debugging and validating potential issues.</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/vscode.png" alt="Django" width="50"></td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">VSCode</td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">VSCode will serve as our text editor. It is lightweight and has many beneficial plugins, including a TLA+ plugin.</td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/ubuntu.png" alt="PostgreSQL" width="50"></td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">Ubuntu Linux</td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">The system will run in an Ubuntu Linux enviornment. </td>
-            </tr>
-            <tr>
-                <td style="padding: 10px; border: 1px solid #FFD700;">
-                    <img src="images/logos/github.png" alt="AWS" width="50" style="border-radius: 50%;">
-                </td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">GitHub</td>
-                <td style="padding: 10px; border: 1px solid #FFD700;">GitHub will serve as our version control software, allowing us to easily apply updates and rollbacks.</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">Python serves as our primary programming language, providing a robust ecosystem for scientific computing, data analysis, and machine learning. We use Python to develop our ML models, process spectroscopy data from pXRF devices, analyze geospatial information, and build the backend services that power our archaeological prediction system.</td>
             </tr>
             
+            <!-- Libraries -->
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/Tensorflow_logo.svg.png" alt="TensorFlow" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">TensorFlow</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">These machine learning libraries enable us to develop the neural networks and predictive models that integrate pXRF chemical data with spatial coordinates. They support both traditional machine learning algorithms and deep learning approaches needed for classifying pottery sherds and predicting production locations at archaeological sites.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/geopandas.png" alt="GeoPandas" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">GeoPandas</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">These geospatial libraries extend Python's data analysis capabilities to handle geographic information. They allow us to process GPS coordinates, perform spatial joins between chemical data and location, and create visualizations that help archaeologists understand patterns of production activities at Huaca Letrada.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/OpenCV_logo_black.png" alt="OpenCV" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">OpenCV</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">This computer vision library processes drone imagery and photogrammetry data. We use OpenCV to extract features from aerial photos, prepare images for structure from motion (SfM) processing, and integrate visual data with our spectroscopic and spatial datasets in the ML prediction pipeline.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/flask-logo-png-transparent.png" alt="Flask" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">Flask</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">These web frameworks allow us to create the APIs that connect our mobile data collection app with our ML prediction backend. They handle authentication, data validation, and serve prediction results back to field archaeologists, supporting both online and offline operations needed during fieldwork.</td>
+            </tr>
+            
+            <!-- Other Technologies -->
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/flutter.png" alt="Flutter" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">Flutter</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">This cross-platform development framework enables us to build a single mobile application that works on both iOS and Android devices. The app integrates with pXRF devices, captures GPS coordinates, records field notes and images, and synchronizes with our central database when connectivity is available.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/Postgresql_elephant.svg" alt="PostgreSQL" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">PostgreSQL with PostGIS</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">Our database solution uses PostgreSQL with the PostGIS extension to store and query spatial data. This combination provides advanced geospatial capabilities needed to analyze relationships between chemical signatures and archaeological contexts, supporting the spatial predictions our ML tools generate.</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/opendronemap.png" alt="SfM" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">OpenDroneMap</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">This open-source photogrammetry toolkit processes drone imagery to create 3D models of archaeological sites using Structure from Motion (SfM) techniques. The resulting terrain models provide critical context for our chemical and spatial data analysis, helping to identify landscape features related to ancient production activities.</td>
+            </tr>
+            
+            <!-- Text Editor -->
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;"><img src="images/logos/vscode.png" alt="VSCode" width="50"></td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">Visual Studio Code</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">VSCode serves as our primary development environment. Its lightweight nature, extensive extension marketplace, and excellent integration with Python and web technologies make it ideal for our diverse development needs. Extensions for geospatial data visualization and machine learning model debugging enhance our productivity.</td>
+            </tr>
+            
+            <!-- Version Control -->
+            <tr>
+                <td style="padding: 10px; border: 1px solid #FFD700;">
+                    <img src="images/logos/github.png" alt="GitHub" width="50" style="border-radius: 50%;">
+                </td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">GitHub</td>
+                <td style="padding: 10px; border: 1px solid #FFD700;">GitHub provides our version control system and collaboration platform. We maintain repositories for our data collection app, ML prediction tools, and documentation, allowing team members to work concurrently while tracking changes. GitHub Actions automates our testing pipeline to ensure code quality, and GitHub Pages hosts our project documentation for sharing with the archaeological community.</td>
+            </tr>
         </table>
     </div>
     
