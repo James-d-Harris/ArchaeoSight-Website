@@ -364,4 +364,16 @@ body {
     object-fit: cover;
 }
 
+.preview-video {
+    min-width: 900px;
+    width: 25%;
+    margin: 20px auto;
+    text-align: center;
+}
+.preview-video iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
 
