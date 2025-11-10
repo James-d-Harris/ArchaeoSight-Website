@@ -159,7 +159,7 @@ body {
 .team-section {
     text-align: center;
     padding: 40px;
-    background-color: #ede7dd;
+    background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
@@ -369,6 +369,13 @@ body {
     object-fit: cover;
 }
 
+.preview-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #ede7dd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
 .preview-video {
     min-width: 900px;
     width: 25%;
@@ -380,5 +387,3 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-
